@@ -1,5 +1,6 @@
 all: main.cpp
-	g++ main.cpp -o main
+	mkdir ./objects
+	g++ main.cpp -o objects/main
 
 clean:
-	$(RM) main
+	rm -rf ./objects
