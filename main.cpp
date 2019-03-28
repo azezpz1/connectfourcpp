@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -10,7 +11,9 @@ int main(int argc, char *argv[])
     }
 
     string state = argv[1];
-    cout << state << endl;
+    int state_length = state.length();
+    cout << "Board state length is: " << state_length << endl;
+    cout << "Board state is: " << state << endl;
 
     return 0;
 }
