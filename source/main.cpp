@@ -2,7 +2,15 @@
 #include <string>
 using namespace std;
 
-int main(int argc, char *argv[])
+class Board
+{
+  public:
+    Board(string state)
+    {
+    }
+}
+
+main(int argc, char *argv[])
 {
     if (argc != 2)
     {
