@@ -2,14 +2,6 @@
 #include <string>
 using namespace std;
 
-class Board
-{
-  public:
-    Board(string state)
-    {
-    }
-}
-
 main(int argc, char *argv[])
 {
     if (argc != 2)
