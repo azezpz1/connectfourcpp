@@ -5,17 +5,18 @@ using namespace std;
 
 class InvalidBoardState : public exception
 {
-  private:
-    int expected_x_length;
-    int expected_y_length;
-    long state_length;
-
+  public:
     InvalidBoardState(int expected_x_length, int expected_y_length, long state_length)
     {
         expected_x_length = expected_x_length;
         expected_y_length = expected_y_length;
         state_length = state_length;
     };
+
+  private:
+    int expected_x_length;
+    int expected_y_length;
+    long state_length;
 
     virtual const char *what() const throw()
     {
@@ -45,6 +46,7 @@ class Board
         if (state_length != x_length * y_length)
         {
             // Invalid board state
+            throw InvalidBoardState(x_length, y_length, state_length);
         }
     }
 };
