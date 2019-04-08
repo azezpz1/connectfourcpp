@@ -1,2 +1,3 @@
-# connect_four_cpp
+# connectfourcpp
+
 Connect Four Player in C++
