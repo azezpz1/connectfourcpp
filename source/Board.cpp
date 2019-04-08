@@ -37,11 +37,18 @@ public:
   {
     allowed_x_length = 6;
     allowed_y_length = 7;
+    state_length = state_str.length();
+
+    if (!is_valid_state_length(state_str) == true)
+    {
+      throw InvalidBoardState(allowed_x_length, allowed_y_length, state_length);
+    }
   }
 
 private:
   int allowed_x_length;
   int allowed_y_length;
+  long state_length;
 
   bool is_valid_state_length(string state)
   {
@@ -49,7 +56,7 @@ private:
     if (state_length != allowed_x_length * allowed_y_length)
     {
       // Invalid board state
-      throw InvalidBoardState(allowed_x_length, allowed_y_length, state_length);
+      return false;
     }
 
     return true;
