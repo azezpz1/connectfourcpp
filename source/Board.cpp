@@ -51,5 +51,7 @@ private:
       // Invalid board state
       throw InvalidBoardState(allowed_x_length, allowed_y_length, state_length);
     }
+
+    return true;
   }
 };
