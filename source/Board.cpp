@@ -39,7 +39,7 @@ public:
     allowed_y_length = 7;
     state_length = state_str.length();
 
-    if (!is_valid_state_length(state_str) == true)
+    if (is_valid_state_length(state_str) == false)
     {
       throw InvalidBoardState(allowed_x_length, allowed_y_length, state_length);
     }
