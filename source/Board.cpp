@@ -45,6 +45,16 @@ public:
     }
   }
 
+  int get_allowed_x_length()
+  {
+    return allowed_x_length;
+  };
+
+  int get_allowed_y_length()
+  {
+    return allowed_y_length;
+  };
+
 private:
   int allowed_x_length;
   int allowed_y_length;
